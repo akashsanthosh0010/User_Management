@@ -39,6 +39,7 @@ function UserProfile() {
       image: e.target.files[0]
     })
   };
+  console.log('pic:',userUpdateDetails.image);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -91,8 +92,6 @@ function UserProfile() {
                 className="rounded-circle img-fluid" style={{width: '100px'}} alt='img'/>
             </div>
             <h4 className="mb-2">{userDetails?.first_name}</h4>
-            <p className="text-muted mb-1">{userDetails?.email} <span className="mx-2"></span> </p>
-            <p className="text-muted mb-2">{userDetails?.phone_number} <span className="mx-2"></span> </p>
         
             
             <form onSubmit={handleSubmit}>

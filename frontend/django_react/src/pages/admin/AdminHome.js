@@ -53,8 +53,6 @@ function AdminHome() {
           <thead className="bg-light">
             <tr>
               <th>Name</th>
-              <th>Phone</th>
-              <th>Active Status</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -81,16 +79,7 @@ function AdminHome() {
                   </div>
                 </td>
 
-                <td>
-                  <span className="badge badge-primary rounded-pill d-inline">
-                    {user.phone_number}
-                  </span>
-                </td>
-                <td>
-                <span className={`badge rounded-pill d-inline ${user.is_active ? 'badge-success' : 'badge-danger'}`}>
-                  {user.is_active ? 'Active' : 'Not Active'}
-                </span>
-                </td>
+                
 
                 <td>
                   <Link

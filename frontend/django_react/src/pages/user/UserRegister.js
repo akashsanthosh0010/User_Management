@@ -52,7 +52,7 @@ function UserRegister() {
 
 
   return (
-    <section  style={{backgroundColor: "#508bfc"}}>
+    <section >
     <div className="container py-5 ">
       <div className="row d-flex justify-content-center align-items-center ">
         <div className="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -62,37 +62,45 @@ function UserRegister() {
               <h3 className="mb-5 text-center">Register Now</h3>
               <form onSubmit={handleRegisterSubmit} method='POST'>
 
-              <div className=" mb-4">
-                <input type="text" name='first_name' className="form-control form-control-lg" required />
-                <label className="form-label" >Name</label>
-              </div>
-              <div className=" mb-4">
-                <input type="email" id="typeEmailX-2" name='email' className="form-control form-control-lg"  required/>
-                <label className="form-label" htmlFor="typeEmailX-2">Email</label>
-              </div>
-
-              <div className=" mb-4">
-                <input type="text"  className="form-control form-control-lg"  name='phone_number' required/>
-                <label className="form-label" >Mobile Number</label>
-              </div>
-  
-              <div className=" mb-4">
-                <input type="password" id="typePasswordX-2" className="form-control form-control-lg" name='password' required/>
-                <label className="form-label" htmlFor="typePasswordX-2">Password</label>
-              </div>
-  
-  
-  
-              <button className="btn btn-primary btn-lg btn-block" type="submit">Regiter Now</button>
-              </form>
-
               <ul className='text-danger'>
               {Object.keys(formError).map((key) => (
                 formError[key].map((message, index) => (
                   <li key={`${key}_${index}`}>{message}</li>
                 ))
               ))}
-            </ul>
+              </ul>
+
+              <div className=" mb-4">
+                <input type="text" name='first_name' className="form-control form-control-lg"/>
+                <label className="form-label" >Name</label>
+              </div>
+              <div className=" mb-4">
+                <input type="email" id="typeEmailX-2" name='email' className="form-control form-control-lg"/>
+                <label className="form-label" htmlFor="typeEmailX-2">Email</label>
+              </div>
+
+              <div className=" mb-4">
+                <input type="text"  className="form-control form-control-lg"  name='phone_number' />
+                <label className="form-label" >Mobile Number</label>
+              </div>
+  
+              <div className=" mb-4">
+                <input type="password" id="typePasswordX-2" className="form-control form-control-lg" name='password'/>
+                <label className="form-label" htmlFor="typePasswordX-2">Password</label>
+              </div>
+  
+  
+  
+              <button className="btn btn-primary btn-lg btn-block" type="submit">Register Now</button>
+              </form>
+
+              {/* <ul className='text-danger'>
+              {Object.keys(formError).map((key) => (
+                formError[key].map((message, index) => (
+                  <li key={`${key}_${index}`}>{message}</li>
+                ))
+              ))}
+            </ul> */}
               
   
               <hr className="my-4"/>

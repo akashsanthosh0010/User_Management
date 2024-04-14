@@ -20,11 +20,7 @@ class MyAccountManager(BaseUserManager):
         return user
     
     def create_superuser(self,first_name,email, phone_number,password):
-        user = self.create_user(email=self.normalize_email(email),
-                                first_name=first_name,
-                                phone_number=phone_number,
-                                password=password,
-                                )
+        user = self.create_user(email=self.normalize_email(email),first_name=first_name,phone_number=phone_number,password=password,)
         user.is_active = True
         user.is_superuser = True
         user.is_email_verified = True

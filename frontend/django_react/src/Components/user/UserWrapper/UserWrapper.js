@@ -80,7 +80,7 @@ function UserWrapper() {
   return (
     <>
    
-    <UserHeader/>
+    
       <Routes>
           <Route  path="/" element={<UserHome/>}></Route>
 
@@ -89,6 +89,8 @@ function UserWrapper() {
 
           <Route  path="profile" element={
             <PrivateRoute>
+              <UserHeader/>
+              
                 <UserProfile/>
           </PrivateRoute>
           }>
@@ -96,7 +98,7 @@ function UserWrapper() {
           </Route>
 
         </Routes>    
-      <UserFooter/>
+      
     
     </>
   );

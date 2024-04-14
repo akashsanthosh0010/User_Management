@@ -42,16 +42,10 @@ function UserHeader() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           {/* <!-- Navbar brand --> */}
           <Link className="navbar-brand mt-2 mt-lg-0" to='/'>
-            LOGO
+            Home
           </Link>
         {/* //  <!-- Left links --> */}
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-            {authentication_user.isAuthenticated?<Link className="nav-link" to='/profile'>{authentication_user.name}</Link>: <Link className="nav-link" to='/login'>Login</Link>}
-              
-        
-            </li>
-          </ul>
+          
           {/* <!-- Left links --> */}
         </div>
         {/* <!-- Collapsible wrapper --> */}
@@ -71,21 +65,13 @@ function UserHeader() {
               data-mdb-toggle="dropdown"
               aria-expanded="false"
             >
-              <img
-                src={authentication_user.isAuthenticated&&user_basic_details.profile_pic?user_basic_details.profile_pic:userimg}
-                className="rounded-circle"
-                height="25"
-                alt="Black and White Portrait of Link Man"
-                loading="lazy"
-              />
+              <p>Menu</p>
             </Link>
             <ul
               className="dropdown-menu dropdown-menu-end"
               aria-labelledby="navbarDropdownMenuAvatar"
             >
-              <li>
-                <Link className="dropdown-item" to='/profile'>My profile</Link>
-              </li>
+              
              
               <li>
               {!authentication_user.isAuthenticated?<Link className="dropdown-item" to='/login'>Login</Link>: 

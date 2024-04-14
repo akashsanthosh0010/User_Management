@@ -53,13 +53,11 @@ function UserLogin() {
       console.log(error);
       if (error.response.status===401)
       {
-       
         setFormError(error.response.data)
       }
       else
       {
         console.log(error);
-  
       }
     }
   }
@@ -69,17 +67,16 @@ function UserLogin() {
     <section >
   <div className="container py-5">
     <div className="row d-flex align-items-center justify-content-center">
-      <div className="col-md-8 col-lg-7 col-xl-6">
+      <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
       {message && <div class="alert alert-primary" role="alert" data-mdb-color="dark">
       {message}
       </div>}
-      
-
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-          className="img-fluid" alt="Phone "/>
-      </div>
-      <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
         <form method='POST' onSubmit={handleLoginSubmit}>
+        <ul className='text-danger'>
+        {formError['detail'] && <li>
+        {formError['detail']}
+          </li>}
+      </ul>
           {/* <!-- Email input --> */}
           <div className=" mb-4">
             <input type="email" name='email' id="form1Example13" className="form-control form-control-lg" />
@@ -100,11 +97,11 @@ function UserLogin() {
           {/* <!-- Submit button --> */}
           <button type="submit" className="btn btn-primary btn-lg btn-block">Sign in</button>
 
-          <ul className='text-danger'>
+          {/* <ul className='text-danger'>
              {formError['detail'] && <li>
              {formError['detail']}
               </li>}
-            </ul>
+            </ul> */}
           
         </form>
       </div>
